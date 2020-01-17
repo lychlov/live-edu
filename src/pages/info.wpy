@@ -93,6 +93,11 @@ export default class Index extends wepy.page {
   async getUserInfo(phone,code) {
     let that = this;
     let userSpecialInfo = wepy.getStorageSync(USER_SPECICAL_INFO) || {};
+    wx.getUserInfo({
+      success: function(res){
+        
+      }
+    });
     let openId = userSpecialInfo.openid;
     const json = await api.getUserInfo({
       query: {
@@ -137,7 +142,7 @@ export default class Index extends wepy.page {
 </script>
 <style lang="less">
 .header {
-  background: #ff6a3c;
+  background: #ff693c;
   height: 260rpx;
   width: 100%;
 }
