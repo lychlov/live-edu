@@ -77,6 +77,7 @@ import wepy from 'wepy';
 import {
   USER_INFO,USER_SPECICAL_INFO
 } from '@/utils/constant';
+
 export default class Index extends wepy.page {
   config = {
     navigationBarTitleText: '我',
